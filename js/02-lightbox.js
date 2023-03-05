@@ -1,4 +1,5 @@
 import { galleryItems } from './gallery-items.js';
+// import SimpleLightbox from "./simplelightbox";
 const galleryContainer = document.querySelector('.gallery');
 function createGalleryCardsMarkup(items) {
     return items.map(({ preview, original, description }) => {

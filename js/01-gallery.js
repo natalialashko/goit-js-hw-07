@@ -20,22 +20,20 @@ const cardsMarkup = createGalleryCardsMarkup(galleryItems);
 galleryContainer.insertAdjacentHTML('beforeend', cardsMarkup);
 console.log(galleryItems);
 galleryContainer.addEventListener('click', onClick);
+galleryContainer.addEventListener('keydown', onEscKeyPress)
 function onClick(event) {
     event.preventDefault();
     if (event.target.nodeName !== 'IMG') {
         return
     }
-    // console.log(event.target);
-    // const urlImgOriginal = event.target.dataset.source;
-    // console.log(urlImgOriginal);
-
-    const instance = basicLightbox.create(`
+       
+        const instance = basicLightbox.create(`
             <img
         src="${event.target.dataset.source}"
         width="900"
          height="700"
          />
     
-`)
-   instance.show()
+        `)
+        instance.show()
     }
